@@ -5,8 +5,7 @@ metadata:
 spec:
    replicas: 2
    selector: 
-      matchExpressions:
-         - { key: env, operator: In , values: [system]  }
+      env: system
       
    template:
       metadata: 
