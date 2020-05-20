@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+   name: rs1
+spec:
+   replicas: 8
+   selector: 
+      matchExpressions:
+         - { key: env, operator: In , values: [system]  }
+      
+   template:
+      metadata: 
+         labels:
+            env: system
+      spec:
+         containers: 
+            - name: c2
+              image: httpd   
+
