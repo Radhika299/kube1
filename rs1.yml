@@ -9,7 +9,8 @@ spec:
          - { key: env, operator: In , values: [system]  }
       
    template:
-      metadata: firstpod
+      metadata: 
+         name: firstpod
          labels:
             env: system
       spec:
